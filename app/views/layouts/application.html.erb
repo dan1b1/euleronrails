@@ -22,7 +22,7 @@
         <!--a class="active" href="#">EulerOnRails</a-->
         <div class="nav-collapse">
           <ul class="nav">
-			<li class="active"><a href="#">EulerOnRails</a></li>
+			<li class="active"><%= link_to_unless_current('Home',:action=> '#problems')%>>EulerOnRails</a></li>
             <li><a href="#problems">Problems</a></li>
             <!--li><a href="#contact">Contact</a></li-->
           </ul>
@@ -36,7 +36,6 @@
 			</form>
 		<% end -%>
 		<%- if user_signed_in?%>
-		
 			<form class="navbar-form pull-right">
 				<ul class="nav">
 					<li class="active"><%= link_to("Log Out", destroy_user_session_path, :method => :delete) %></li>
